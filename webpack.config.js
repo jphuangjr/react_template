@@ -23,7 +23,9 @@ module.exports = {
 			},{
 				test: /\.json$/,
 				loader:'json-loader'
-
+			},{
+				test: /\.(png|jpg)$/,
+				loader: 'url-loader?limit=8192'
 			}
 		]
 	}

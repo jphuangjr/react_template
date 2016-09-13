@@ -13,22 +13,25 @@ const MenuBar = React.createClass({
 	getStyle() {
 		return {
 			menuBar :{
-				padding: "20px",
-				background: "grey"
+				padding: "12px 10px 5px 30px",
+				marginBottom: "0px",
+				background: "Black"
 			},
 			title : {
-				padding: "10px"
+				fontWeight: "bold",
+				fontFamily: "Montserrat",
+				color: "#FFFFFF",
+				fontSize: "18px"
 			},
 			leftMenu : {
 				margin: "-7px 0 0 0",
 				display: "inline-block",
 				float: "right",
-				background: "red",
 				padding: "10px"
 			},
 			items : {
-				background: "green",
-				margin: "0 5px 0 5px",
+				color: "#FFFFFF",
+				margin: "0 7px 0 7px",
 				cursor: "pointer"
 			}
 		}
@@ -45,13 +48,13 @@ const MenuBar = React.createClass({
 	render() {
 		const styles = this.getStyle();
 		return (
-				<div style={styles.menuBar}>
-					<div className="title">{this.props.title}
+				<nav className="navbar navbar-default navbar-fixed-top" style={styles.menuBar}>
+					<div className="title"><span style={styles.title}>{this.props.title}</span>
 						<span style={styles.leftMenu}>
 						{this.generateMenu()}
 						</span>
 					</div>
-				</div>
+				</nav>
 		)
 	}
 });

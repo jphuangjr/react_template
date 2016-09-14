@@ -13,8 +13,8 @@ const MenuBar = React.createClass({
 	getStyle() {
 		return {
 			menuBar :{
-				padding: "12px 10px 5px 30px",
-				marginBottom: "0px",
+				padding: "12px 10px 20px 30px",
+				marginBottom: "-10px",
 				background: "Black"
 			},
 			title : {

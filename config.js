@@ -1,9 +1,12 @@
 module.exports = {
 	landingPage : {
-		title: "The Homepage",
+		title: "THE TITLE",
 		subtitle: "The very very long and descriptive subtitle",
-		titleWidth: "400px",
+		titleColor: "white",
+		subtitleColor: "white",
+		titleWidth: "300px",
 		subTitleWidth: "1000px",
-		backgroundImage: "home.jpg"
+		backgroundImage: "home.jpg",
+		logo: "logo.png"
 	}
 }

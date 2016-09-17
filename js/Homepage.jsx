@@ -1,9 +1,19 @@
 const React = require("react");
 const { Link } = require('react-router');
 const config = require("../config");
-import MenuBar from "./MenuBar"
+import MenuBar from "./MenuBar";
+import Mask from "./modules/Mask.jsx";
+import Loading from "./modules/Loading.jsx";
 
 export default class HomePage extends React.Component {
+
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			loading: true
+		}
+	}
 
 	getStyle() {
 		return {
@@ -42,6 +52,14 @@ export default class HomePage extends React.Component {
 		}
 	}
 
+	isLoading() {
+		if(this.state.loading){
+			return (
+				<Loading />
+			)
+		}
+	}
+
 
 
 	render() {
@@ -51,6 +69,7 @@ export default class HomePage extends React.Component {
 						<img style={styles.logo} src={`public/resources/images/${config.landingPage.logo}`} />
 						<h1 style={styles.title}>{config.landingPage.title}</h1>
 						<h5 style={styles.subtitle}>{config.landingPage.subtitle}</h5>
+						{this.isLoading()}
 				</div>
 		)
 	}

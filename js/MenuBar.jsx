@@ -18,8 +18,8 @@ const MenuBar = React.createClass({
 				top:0,
 				position:"fixed",
 				width: "100%",
-				padding: "12px 20px 20px 30px",
-				marginBottom: "-10px",
+				padding: "12px 20px 6px 30px",
+				marginBottom: "-20px",
 				background: "Black"
 			},
 			title : {

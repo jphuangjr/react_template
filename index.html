@@ -2,16 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Template</title>
+    <title>React Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="React Template by Joshua Huang ">
     <script src="https://use.fontawesome.com/4c038e47c3.js"></script>
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
+    <script src="./public/resources/js/jquery.js"></script>
+    <script src="public/resources/js/bootstrap.min.js"></script>
+    <script src="public/resources/js/jquery.easing.min.js"></script>
+    <script src="public/resources/js/grayscale.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="public/normalize.css">
     <link rel="stylesheet" href="public/style.css">
 
 </head>
-<body>
+<body style="background: black" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 <div id="app"></div>
 <script src="public/bundle.js"></script>
 </body>
+<script>
+    var checkMobile = function(){
+        if(screen.width < 500){
+            return true;
+        }
+    };
+    //    if(checkMobile()){
+    //        document.getElementsByTagName("body")[0].style.background = "none"
+    //    }
+</script>
 </html>

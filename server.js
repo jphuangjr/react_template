@@ -3,6 +3,9 @@ var express = require('express');
 var app = express();
 var PORT = process.env.PORT || 8081;
 
+var createDirectMail = require("directmail");
+var directMail = createDirectMail();
+
 // using webpack-dev-server and middleware in development environment
 if(process.env.NODE_ENV !== 'production') {
 	var webpackDevMiddleware = require('webpack-dev-middleware');
@@ -19,6 +22,10 @@ app.use(express.static(path.join(__dirname)));
 
 app.get('*', function(request, response) {
 	response.sendFile(path.resolve(__dirname, "index.html"))
+});
+
+app.post("/email", function(req, res){
+	console.log(req)
 });
 
 app.listen(PORT, function(error) {

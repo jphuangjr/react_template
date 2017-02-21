@@ -14,22 +14,22 @@ const Layout = (props) => {
   } else {
     return (
         <div className="app-container">
-          <MenuBar
-              title={config.menu.title}
-              menuItems= {[
-                {name:"Home", action: function(){}, location:"/"},
-                {name:"About", action: function(){}, location: "/about"},
-                {name:"History", action: function(){}, location: "/chapters"},
-                {name:"Flyer", action: function(){}, location: "/RushSchedule"},
-                {name:"Contact", action: function(){}, location: "/contact"}
-              ]}/>
+              <MenuBar
+                  title={config.menu.title}
+                  menuItems= {[
+                    {name:"Home", action: function(){}, location:"/"},
+                    {name:"About", action: function(){}, location: "/about"},
+                    {name:"History", action: function(){}, location: "/chapters"},
+                    {name:"Flyer", action: function(){}, location: "/RushSchedule"},
+                    {name:"Contact", action: function(){}, location: "/contact"}
+                  ]}/>
           {props.children}
         </div>
     )
   }
 };
 
-const { element } = React.PropTypes
+const { element } = React.PropTypes;
 
 Layout.propTypes = {
   children: element
